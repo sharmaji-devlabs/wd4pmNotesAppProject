@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/black"
+    android:orientation="vertical"
+    tools:context=".editorscreen.EditorScreen"
+    >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dimen_50"
+        android:layout_margin="20dp">
+        <include
+            android:id="@+id/back_button"
+            layout="@layout/icon_button" />
+        <Space
+            android:layout_width="190dp"
+            android:layout_height="match_parent"/>
+        <include
+            android:id="@+id/eye_button"
+            layout="@layout/icon_button" />
+        <Space
+            android:layout_width="20dp"
+            android:layout_height="match_parent"/>
+        <include
+            android:id="@+id/save_button"
+            layout="@layout/icon_button" />
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_margin="20dp"
+        android:orientation="vertical"
+        android:layout_weight="1"
+        >
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/dimen_50"
+            android:inputType="text"
+            android:maxLines="1"
+            android:text="Title" />
+
+        <EditText
+            android:layout_marginTop="20dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@null"
+            android:textSize="23sp"
+            android:minHeight="50dp"
+            android:inputType="textMultiLine"
+            android:textColor="@color/white"
+            android:textColorHint="#777777"
+            android:hint="Type something..."
+             />
+    </LinearLayout>
+
+</LinearLayout>

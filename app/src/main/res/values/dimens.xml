@@ -1,0 +1,5 @@
+<resources>
+    <dimen name="dimen_16">16dp</dimen>
+    <dimen name="dimen_50">50dp</dimen>
+    <dimen name="toolbar_height">60dp</dimen>"
+</resources>
