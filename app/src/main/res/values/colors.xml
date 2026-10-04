@@ -8,4 +8,9 @@
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
     <color name="purple">#FD99FF</color>
+    <color name="SoftCoralPink">#FF9E9E</color>
+    <color name="LimeGreen">#91F48F</color>
+    <color name="LimeYellow">#FFF599</color>
+    <color name="Limeblue">#9EFFFF</color>
+    <color name="Limepurple"> #B69CFF</color>
 </resources>
