@@ -36,6 +36,7 @@
         android:layout_weight="1"
         >
         <EditText
+            android:id="@+id/btn_title_heading"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:textSize="@dimen/dimen_50"
@@ -44,6 +45,7 @@
             android:text="Title" />
 
         <EditText
+            android:id="@+id/btn_description_contain"
             android:layout_marginTop="20dp"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
