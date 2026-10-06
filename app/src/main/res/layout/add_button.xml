@@ -5,8 +5,10 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="@dimen/dimen_50"
     android:layout_height="@dimen/dimen_50"
-    android:background="@drawable/circlebutton"
     android:contentDescription="Add Note"
     app:backgroundTint="#242424"
-    app:srcCompat="@drawable/add1"
-    app:tint="@android:color/white" />
+    app:icon="@drawable/add1"
+    app:iconSize="24dp"
+    app:iconPadding="0dp"
+    app:iconGravity="textStart"
+    app:iconTint="@android:color/white" />
