@@ -1,16 +1,11 @@
 package com.exmin.notesapp.notesadapter
 
-import android.graphics.Color
 import android.view.LayoutInflater
-import android.view.View
 import android.view.ViewGroup
-import android.widget.TextView
-import androidx.cardview.widget.CardView
 import androidx.recyclerview.widget.RecyclerView
-import androidx.viewbinding.ViewBinding
 import com.exmin.notesapp.R
 import com.exmin.notesapp.databinding.ItemNoteBinding
-import com.exmin.notesapp.notesdataclass.NotesData
+import com.exmin.notesapp.dbhelper.notesModel.NotesData
 
 class NotesAdapter(
     private val notesList: ArrayList<NotesData>

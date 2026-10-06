@@ -11,7 +11,7 @@ import com.exmin.notesapp.R
 import com.exmin.notesapp.databinding.HomeScreenBinding
 import com.exmin.notesapp.activity.editorscreen.EditorScreen
 import com.exmin.notesapp.notesadapter.NotesAdapter
-import com.exmin.notesapp.notesdataclass.NotesData
+import com.exmin.notesapp.dbhelper.notesModel.NotesData
 import com.exmin.notesapp.searchscreen.SearchScreen
 
 class HomeScreen : AppCompatActivity() {

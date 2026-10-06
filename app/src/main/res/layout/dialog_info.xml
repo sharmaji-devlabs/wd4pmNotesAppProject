@@ -1,0 +1,177 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:minWidth="280dp"
+    android:maxWidth="350dp"
+    android:minHeight="220dp"
+    android:maxHeight="260dp"
+    android:orientation="vertical"
+    android:padding="20dp"
+    android:background="@drawable/info_dialog_background">
+
+    <!-- Designed by -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="25dp"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:text="Designed by - "
+            android:textColor="#BDBDBD"
+            android:textSize="12sp" />
+
+        <TextView
+            android:id="@+id/designedBy"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:textColor="#FFFFFF"
+            android:textSize="12sp"
+            android:textAlignment="textStart"
+            android:singleLine="true"
+ />
+
+    </LinearLayout>
+
+
+    <!-- Redesigned by -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="25dp"
+        android:orientation="horizontal"
+        android:layout_marginTop="7dp">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="Redesigned by - "
+            android:layout_weight="1"
+            android:textColor="#BDBDBD"
+            android:textSize="12sp" />
+
+        <TextView
+            android:id="@+id/redesignedBy"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:textColor="#FFFFFF"
+            android:textSize="12sp"
+            android:singleLine="true"
+       />
+
+    </LinearLayout>
+
+
+    <!-- Illustrations -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="25dp"
+        android:orientation="horizontal"
+        android:layout_marginTop="7dp">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:text="Illustrations - "
+            android:textColor="#BDBDBD"
+            android:textSize="12sp" />
+
+        <TextView
+            android:id="@+id/illustrations"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:textColor="#FFFFFF"
+            android:textSize="12sp"
+            android:singleLine="true"
+/>
+
+    </LinearLayout>
+
+
+    <!-- Icons -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="25dp"
+        android:orientation="horizontal"
+        android:layout_marginTop="7dp">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:text="Icons - "
+            android:textColor="#BDBDBD"
+            android:textSize="12sp" />
+
+        <TextView
+            android:id="@+id/icons"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:textColor="#FFFFFF"
+            android:textAlignment="textStart"
+            android:textSize="12sp"
+            android:singleLine="true"
+    />
+
+    </LinearLayout>
+
+
+    <!-- Font -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="25dp"
+        android:orientation="horizontal"
+        android:layout_marginTop="7dp">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:text="Font - "
+            android:textColor="#BDBDBD"
+            android:textSize="12sp" />
+
+        <TextView
+            android:id="@+id/font"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:textAlignment="textStart"
+            android:textColor="#FFFFFF"
+            android:textSize="12sp"
+            android:singleLine="true"
+/>
+
+    </LinearLayout>
+
+
+    <!-- Made by -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginVertical="13dp"
+        android:gravity="center">
+
+        <TextView
+            android:id="@+id/txtmadeBy"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:textColor="#FFFFFF"
+            android:textSize="12sp"
+            android:text="Made by Sakshi"
+            android:singleLine="true"
+          />
+
+    </LinearLayout>
+
+</LinearLayout>
