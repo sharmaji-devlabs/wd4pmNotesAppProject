@@ -2,6 +2,7 @@ package com.exmin.notesapp.activity.homescreen
 
 import android.content.Intent
 import android.os.Bundle
+import android.window.OnBackInvokedDispatcher
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
@@ -10,13 +11,14 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import com.exmin.notesapp.R
 import com.exmin.notesapp.databinding.HomeScreenBinding
 import com.exmin.notesapp.activity.editorscreen.EditorScreen
+import com.exmin.notesapp.dbhelper.NotesDBHelper
 import com.exmin.notesapp.notesadapter.NotesAdapter
 import com.exmin.notesapp.dbhelper.notesModel.NotesData
 import com.exmin.notesapp.searchscreen.SearchScreen
 
 class HomeScreen : AppCompatActivity() {
     private lateinit var binding: HomeScreenBinding
-    private val notesList = ArrayList<NotesData>()
+    private lateinit var dbHelper: NotesDBHelper
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -30,6 +32,7 @@ class HomeScreen : AppCompatActivity() {
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom)
             insets
         }
+        dbHelper = NotesDBHelper(this@HomeScreen)
         with(binding){
             // Toolbar icons
             infoButton.root.setImageResource(R.drawable.info)
@@ -52,8 +55,9 @@ class HomeScreen : AppCompatActivity() {
             recyclerView.apply {
                 layoutManager =
                     LinearLayoutManager(this@HomeScreen)
-                adapter =  NotesAdapter(notesList)
+                adapter =  NotesAdapter(this@HomeScreen, dbHelper.getALLNotes())
             }
         }
     }
+
 }

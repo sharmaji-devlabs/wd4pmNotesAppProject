@@ -17,12 +17,11 @@
         app:tint="#FFFFFF"/>
 
     <TextView
-
+        android:id="@+id/dialog_message"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="16dp"
         android:layout_marginBottom="24dp"
-        android:text="Are you sure you want\ndiscard your changes?"
         android:textColor="#FFFFFF"
         android:textSize="16sp"
         android:textAlignment="center"
@@ -36,7 +35,7 @@
 
 
         <Button
-            android:id="@+id/btn_discard_card"
+            android:id="@+id/dialog_btn_discard"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
@@ -48,7 +47,7 @@
 
 
         <Button
-            android:id="@+id/btn_keep"
+            android:id="@+id/dialog_btn_save"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"

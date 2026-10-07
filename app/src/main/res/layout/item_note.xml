@@ -7,7 +7,7 @@
     android:layout_height="130dp"
     android:minHeight="110dp"
     android:maxHeight="160dp"
-    app:cardUseCompatPadding="true"
+
      android:id="@+id/cardcolor"
     app:cardBackgroundColor="@color/purple"
     app:cardCornerRadius="20dp"
@@ -15,7 +15,7 @@
 
         <TextView
             android:id="@+id/note_title"
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="UI concepts worth existing"
             android:layout_gravity="center"

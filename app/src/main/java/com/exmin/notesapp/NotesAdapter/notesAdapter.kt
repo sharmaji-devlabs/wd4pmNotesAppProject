@@ -1,16 +1,24 @@
 package com.exmin.notesapp.notesadapter
 
+import android.content.Context
+import android.content.Intent
+import android.util.Log
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import com.exmin.notesapp.R
+import com.exmin.notesapp.activity.samplenote.Sample_Note
 import com.exmin.notesapp.databinding.ItemNoteBinding
 import com.exmin.notesapp.dbhelper.notesModel.NotesData
 
 class NotesAdapter(
-    private val notesList: ArrayList<NotesData>
+    val context: Context,
+    private val notesList: MutableList<NotesData>
 ) : RecyclerView.Adapter<NotesAdapter.NoteViewHolder>() {
 
+    init {
+        Log.i("NOTES", "TOTAL NOTES ARE : ${notesList.size}")
+    }
     class NoteViewHolder(val itemViewBinding: ItemNoteBinding) :
         RecyclerView.ViewHolder(itemViewBinding.root)
 
@@ -20,12 +28,6 @@ class NotesAdapter(
         viewType: Int
     ): NoteViewHolder {
         val itemNoteBinding = ItemNoteBinding.inflate(LayoutInflater.from(parent.context))
-//        val view = LayoutInflater.from(parent.context)
-//            .inflate(
-//                R.layout.item_note,
-//                parent,
-//                false
-//            )
 
         return NoteViewHolder(itemNoteBinding)
     }
@@ -66,6 +68,9 @@ class NotesAdapter(
         with(holder.itemViewBinding){
             root.setCardBackgroundColor(colorRef)
             noteTitle.text = note.title
+            root.setOnClickListener {
+                context.startActivity(Intent(context, Sample_Note::class.java))
+            }
         }
     }
 
