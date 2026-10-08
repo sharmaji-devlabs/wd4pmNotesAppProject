@@ -1,6 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="toolbar">Note</string>
+    <string name="create_your_first_note">Create your first note !</string>
+
     <style name="describe">The Design of Everyday Things is required reading for anyone who is interested in the user experience. I personally like to reread it every year or two.
 
         Norman is aware of the durability of his work and the applicability of his principles to multiple disciplines.

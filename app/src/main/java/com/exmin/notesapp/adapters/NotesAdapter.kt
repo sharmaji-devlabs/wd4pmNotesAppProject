@@ -1,5 +1,6 @@
-package com.exmin.notesapp.notesadapter
+package com.exmin.notesapp.adapters
 
+import android.annotation.SuppressLint
 import android.content.Context
 import android.content.Intent
 import android.util.Log
@@ -9,16 +10,30 @@ import androidx.recyclerview.widget.RecyclerView
 import com.exmin.notesapp.R
 import com.exmin.notesapp.activity.samplenote.Sample_Note
 import com.exmin.notesapp.databinding.ItemNoteBinding
+import com.exmin.notesapp.dbhelper.NotesDBHelper
 import com.exmin.notesapp.dbhelper.notesModel.NotesData
 
 class NotesAdapter(
     val context: Context,
-    private val notesList: MutableList<NotesData>
-) : RecyclerView.Adapter<NotesAdapter.NoteViewHolder>() {
 
+) : RecyclerView.Adapter<NotesAdapter.NoteViewHolder>() {
+    private var notesList: MutableList<NotesData>
     init {
+        notesList = NotesDBHelper(context).getALLNotes()
         Log.i("NOTES", "TOTAL NOTES ARE : ${notesList.size}")
     }
+
+
+    fun loadNotes(context: Context){
+        notesList.clear()
+        notesList.addAll(NotesDBHelper(context).getALLNotes())
+        for (note in notesList){
+            Log.i("NOTES", note.toString())
+        }
+    }
+
+    fun getNotesSize()= notesList.size
+
     class NoteViewHolder(val itemViewBinding: ItemNoteBinding) :
         RecyclerView.ViewHolder(itemViewBinding.root)
 
@@ -68,14 +83,17 @@ class NotesAdapter(
         with(holder.itemViewBinding){
             root.setCardBackgroundColor(colorRef)
             noteTitle.text = note.title
+
             root.setOnClickListener {
-                context.startActivity(Intent(context, Sample_Note::class.java))
+                context.startActivity(Intent(context, Sample_Note::class.java).apply {
+                    putExtra("NOTES", note)
+                })
             }
         }
     }
 
 
     override fun getItemCount(): Int {
-        return notesList.size
+        return getNotesSize()
     }
 }

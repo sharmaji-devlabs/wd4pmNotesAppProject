@@ -42,7 +42,8 @@
             android:textSize="@dimen/dimen_50"
             android:inputType="text"
             android:maxLines="1"
-            android:text="Title" />
+            android:textColorHint="#777777"
+            android:hint="Title" />
 
         <EditText
             android:id="@+id/btn_description_contain"

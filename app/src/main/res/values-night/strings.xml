@@ -1,4 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="toolbar">Note</string>
+    <string name="create_your_first_note">Create your first note !</string>
 </resources>

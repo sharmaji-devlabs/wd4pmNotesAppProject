@@ -75,13 +75,9 @@ class NotesDBHelper(val context: Context) :
 //            val id = cursor.getInt(1) // pass index by self
             val id =
                 cursor.getInt(cursor.getColumnIndexOrThrow(NOTE_ID)) // getcolumnIndex gives u column index by their name
-
             val title = cursor.getString(cursor.getColumnIndexOrThrow(NOTE_TITLE))
-
             val description = cursor.getString(cursor.getColumnIndexOrThrow(NOTE_DESCRIPTION))
-
             val timeStamp = cursor.getString(cursor.getColumnIndexOrThrow(UPDATE_TIME))
-
             val note =
                 NotesData(id = id, title = title, describe = description, timeStamp = timeStamp)
             Log.i("NOTES", note.toString())
